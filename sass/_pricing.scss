@@ -1,0 +1,157 @@
+.pricing {
+    &__pictures {
+        background-color: $color-dark-blue;
+        background-image: url(../assets/bg-pattern-2.svg);
+        background-repeat: no-repeat;
+        background-position: 39% -41%;
+        background-size: 31.2rem 46.8rem;
+        border-radius: 10px;
+
+        margin-top: 30rem;
+        margin-bottom: 20rem;
+        max-width: 100%;
+        max-height: 60rem;
+
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+
+        @media only screen and (max-width: $bp-largest) {
+            max-width: 90%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-rows: repeat(3, 1fr);
+            max-width: 100%;
+        }
+
+
+    }
+
+    // Phone img
+    &__img {
+        width: 34rem;
+        height: 64rem;
+        grid-row: 1 / 4;
+        grid-column: 2 / 3;
+        margin-top: -18rem;
+        margin-left: -5rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 2 / 5;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 1 / 2;
+            width: 20rem;
+            height: 40rem;
+            margin: 0;
+            margin-top: -20rem;
+            margin-left: 3rem;
+        }
+    }
+
+    &__card {
+        z-index: 10;
+        grid-row: 2 / -1;
+        grid-column: 4 / 5;
+        max-width: 40.6rem;
+        height: 59.5rem;
+        background-color: $color-orange;
+        color: $color-white;
+        border-radius: 10px;
+
+        margin-bottom: -7rem;
+        padding: 3.5rem 7rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 4 / 6;
+            margin-left: -7rem;
+            margin-top: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+            grid-row: 2 / -1;
+
+            height: 49.5rem;
+            width: 100%;
+            margin: 0;
+            
+            // margin-top: 1rem;
+            // margin-left: 0rem;
+
+            margin: 1rem auto;
+
+            max-width: 100%;
+            padding: 2.5rem;
+        }
+
+
+    }
+
+    &__card-heading {
+        margin-bottom: 2rem;
+    }
+
+    &__card-text {
+        max-width: 27rem;
+        justify-content: center;
+        font-weight: 400;
+        margin: 2rem 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            max-width: 100%;
+        }
+    }
+
+    &__card-header {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-right: 1.4rem;
+    }
+
+    &__montlhy-fee {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__button {
+        display: block;
+        border: none;
+        border-radius: 8px;
+        width: 27rem;
+        padding: 1rem 2rem;
+        margin: 1rem auto;
+
+        &--apple {
+            background-color: $color-dark-blue;
+            color: $color-white;
+            transition: all .2s;
+
+            &:hover {
+                background-color: $color-cyan;
+            }
+        }
+
+        &--android {
+            background-color: $color-white;
+            transition: all .2s;
+
+            &:hover {
+                background-color: $color-yellow;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.button-icon {
+    height: 1.5rem;
+    position: relative;
+    top: .13rem;
+}

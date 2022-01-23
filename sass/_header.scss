@@ -1,0 +1,13 @@
+.header {
+    margin-bottom: 15rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin-bottom: 10rem;
+
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0 2rem;
+        
+    }
+}

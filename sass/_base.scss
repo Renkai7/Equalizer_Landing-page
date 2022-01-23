@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// COLORS
+$color-cyan: #66e2dc;
+$color-orange: #fa7453;
+$color-yellow: #ffb964;
+$color-dark-blue: #191826;
+$color-white: #fcfaf9;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+
+html {
+    font-size: 62.5%;   // 1rem = 10px; 10px / 16px = 62.5%
+
+    
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url(../assets/bg-main-desktop.png);
+    background-position: -25rem -22rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+    @media only screen and (max-width: $bp-medium) {
+        background-position: 68% 121%;
+    }
+}
+
+
+.container {
+    position: relative;
+
+    padding: 6rem 18rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 6rem 4rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0;
+    }
+}
+
+.background-symbol {
+    position: absolute;
+    max-width: 17%;
+    max-height: 46.8rem;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    
+    @media only screen and (max-width: $bp-largest) {
+        max-width: 30%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+}
+

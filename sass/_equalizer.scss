@@ -1,0 +1,22 @@
+.equalizer {
+    // width: 100vw;
+
+    
+    &__intro {
+        max-width: 85rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            max-width: 50rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 5rem 2rem;
+            
+        }
+    }
+
+    &__text {
+        margin-top: 3rem;
+    }
+    
+}
